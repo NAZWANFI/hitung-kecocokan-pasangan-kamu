@@ -24,16 +24,16 @@
                 <div class="input1">
                     <p class="nama">nama cowo:
                     <p>
-                        <input class="input" type="text" id="input" />
+                        <input oninput="cekInput()" class="input" type="text" id="input" />
                 </div>
                 <h1 class="love">&#10084;</h1>
                 <div class="input2">
                     <p class="nama">nama cewe:</p>
-                    <input class="input" type="text" id="myInput" />
+                    <input oninput="cekInput()" class="input" type="text" id="myInput" />
                 </div>
                 <div>
-                    <button class="tombol-jodohkan" id="tampilSekali" onclick="jalankanFungsi()">HITUNG</button>
-                    <button class="tombol-clear" onclick="clearInput()">Clear</button>
+                    <button class="tombol-jodohkan" id="tampilSekali" onclick="jalankanFungsi()" disabled>HITUNG</button>
+                    <button class="tombol-clear" id="tampilSekal" onclick="resetForm()" disabled>Clear</button>
                 </div>
                 <div class="hasil_jawaban">
                     <p id="jawaban"></p>
@@ -41,7 +41,7 @@
             </div>
         </div>
     </div>
-    <script src="mainn.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>
