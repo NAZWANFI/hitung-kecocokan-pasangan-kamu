@@ -8,9 +8,28 @@ function jalankanFungsi() {
     const hasilAcak = kumpulanJawaban[jawabanAcak];
 
     document.getElementById("jawaban").innerHTML = hasilAcak;
-    document.getElementById("tampilSekali").disable = clear;
+    document.getElementById("tampilSekali").disabled = true;
 }
-function clearInput() {
-    document.getElementById("myInput").value = "";
-    document.getElementById("input").value = "";
+function cekInput() {
+    var inputNama = document.getElementById("input").value.trim();
+    var inputNama = document.getElementById("myInput").value.trim();
+    var btnCek = document.getElementById("tampilSekali");
+    var btCek = document.getElementById("tampilSekal");
+  
+     if (inputNama.length > 0) {
+        btnCek.disabled = false;
+        btCek.disabled = false;
+     }
+     else { btnCek.disabled = true;
+            btCek.disabled = true;
+     }
+}
+function resetForm() {
+    // Reset input nama
+    document.getElementById('input').value = '';
+    document.getElementById('myInput').value = '';
+    // Aktifkan kembali tombol "Cek"
+    document.getElementById('tampilSekali').disabled = true;
+    document.getElementById('tampilSekal').disabled = true;   
+    document.getElementById('jawaban').textContent = "";
 }
